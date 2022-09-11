@@ -20,7 +20,7 @@ export const App = () => {
       }}
     >
     <Profile
-      name={user.name}
+      username={user.username}
       tag={user.tag}
       location={user.location}
       avatar={user.avatar}

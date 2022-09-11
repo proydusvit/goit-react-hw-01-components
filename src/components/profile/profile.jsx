@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'; 
+import styles from './profile.module.css';
 const Profile = (
     {
         username,
@@ -11,30 +12,30 @@ const Profile = (
    }
 ) => {
     return (
-        <div class="profile">
-  <div class="description">
+      <div className={styles.profile}>
+        <div className={styles.description}>
     <img
-      src={avatar}
-      alt="User avatar"
-      class="avatar"
+            src={avatar}
+            alt="User avatar"
+            className={styles.avatar}
     />
-    <p class="name">{username}</p>
-    <p class="tag">{tag}</p>
-     <p class="location">{location}</p>
+          <p className={styles.name}>{username}</p>
+    <p className={styles.tag}>{tag}</p>
+          <p className={styles.location}>{location}</p>
   </div>
 
-  <ul class="stats">
+        <ul className={styles.stats}>
     <li>
-      <span class="label">Followers</span>
-                    <span class="quantity">{followers}</span>
+      <span className={styles.label}>Followers</span>
+            <span className={styles.quantity}>{followers}</span>
     </li>
     <li>
-      <span class="label">Views</span>
-      <span class="quantity">{views}</span>
+      <span className={styles.label}>Views</span>
+      <span className={styles.quantity}>{views}</span>
     </li>
     <li>
-      <span class="label">Likes</span>
-      <span class="quantity">{likes}</span>
+      <span className={styles.label}>Likes</span>
+      <span className={styles.quantity}>{likes}</span>
     </li>
   </ul>
 </div>
@@ -43,7 +44,7 @@ const Profile = (
 
 Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
     followers: PropTypes.number.isRequired,
